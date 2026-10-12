@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    @apply bg-mare-950 text-areia-100 font-body antialiased;
+}
+
+::selection {
+    @apply bg-brasa-500 text-mare-950;
+}
+
+/* linha ondulada usada para separar seções, lembrando o casco de um barco/onda */
+.onda-divisor {
+    height: 28px;
+    background:
+        radial-gradient(circle at 10px -6px, transparent 12px, var(--onda-cor, #0a2530) 13px) 0 0 / 24px 24px repeat-x;
+}
+
+.foco-visivel:focus-visible {
+    outline: 3px solid theme("colors.brasa.400");
+    outline-offset: 2px;
+}
